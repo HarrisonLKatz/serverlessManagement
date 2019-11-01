@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>serverlessManagement</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <script>
+      el: '#app',
+      data: {
+        entries: [
+          { code: '2345678986543' },
+          { code: '76543789' }
+        ]
+      }
+    })
+    </script>
+    <div id="app">
+      <p>Welcome to serverless management!</p>
+      <p>You have {{entries.length}} entries</p>
+      <table>
+        <tr>
+          <td>code</td>
+        </tr>
+        <tr v-for="entry in entries">
+          <td>{{entry.code}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
